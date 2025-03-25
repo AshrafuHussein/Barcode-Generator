@@ -129,3 +129,51 @@ canvas:hover {
         background-position: 0% 50%;
     }
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 95%;
+        padding: 5px;
+    }
+
+    .left-section {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .right-section {
+        padding: 10px 0;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .barcode-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    input, button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .barcode-container {
+        padding: 8px;
+    }
+
+    canvas {
+        width: 100%;
+        max-width: 300px;
+    }
+}
