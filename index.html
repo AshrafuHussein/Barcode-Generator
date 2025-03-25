@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAN-13 Barcode Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-section">
+            <h2>EAN-13 Barcode Generator</h2>
+
+            <label>Product Name:</label>
+            <input type="text" id="productName" placeholder="Enter product name">
+            <br><br>
+
+            <label>Price:</label>
+            <input type="text" id="price" placeholder="Enter price">
+            <br><br>
+
+            <label>Expiry Date:</label>
+            <input type="date" id="expiryDate">
+            <br><br>
+
+            <button onclick="generateBarcode()">Generate Barcode</button>
+            <button onclick="downloadBarcode()">Download Barcode</button>
+        </div>
+
+        <div class="right-section">
+            <div class="barcode-container">
+                <canvas id="barcodeCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

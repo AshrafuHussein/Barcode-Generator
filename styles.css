@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff, #ffd1ff, #a1c4fd, #c2e9fb, #c2e9fb);
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input {
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff3b2f;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff3b2f;
+    transform: translateY(-3px);
+}
+
+.barcode-container {
+    display: inline-block;
+    padding: 15px;
+    border: 4px solid gold;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.barcode-container:hover {
+    transform: scale(1.05);
+}
+
+canvas {
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+canvas:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-section label {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.left-section input {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.left-section button {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.right-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
